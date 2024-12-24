@@ -1,0 +1,12 @@
+heading:
+Happy Christmas & Holidays!
+
+paragraph:
+Celebrate Christmas with magical getaways and special rates.
+Whether it's a winter escape or a tropical retreat, we’ve
+got the perfect destination for you!
+
+
+
+link to js library
+https://scrollrevealjs.org/guide/installation.html  

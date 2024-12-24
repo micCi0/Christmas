@@ -1,0 +1,164 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Root Variables for Colors and Font */
+:root {
+    /* Primary and highlight color for the design */
+    --primary-color: #ff4747;   
+    --highlight-color: #d49328; 
+    /* Common colors used for text and background */
+    --white-color: #ffffff;
+    --black-color: #000000;
+    /* Light background overlay for certain sections */
+    --bg-light: rgba(255, 255, 255, 0.4);
+    /* Font family for the whole site */
+    --font-family: 'Raleway', sans-serif;
+}
+
+/* Global Styles */
+* {
+    /* Reset margin, padding, and box-sizing for all elements */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Set the font family for the entire page */
+    font-family: var(--font-family);
+}
+
+/* Style for text selection */
+::selection{
+    /* Background color for selected text */
+    background: var(--highlight-color);
+    /* Text color when highlighted */
+    color: var(--white-color);
+}
+
+/* Body Styles */
+body{
+    /* Set background image for the page, ensure it covers the full screen */
+    background: url("./images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    /* Hide scrollbars */
+    overflow: hidden;
+}
+
+/* Header Navigation */
+header nav {
+    /* Full width navigation bar at the top */
+    width: 100%;
+    padding: 20px;
+    /* Fixed position so it stays on top */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* Flexbox layout for alignment */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;  /* Ensures the nav is on top of other elements */
+    background: var(--bg-light);  /* Light background color */
+}
+
+/* Navigation list styling */
+header nav ul{
+    /* Flex display for horizontal navigation links */
+    display: flex;
+    list-style: none;
+}
+
+/* Navigation links styling */
+header nav ul li a{
+    margin: 0 9px;  /* Horizontal spacing between links */
+    color: var(--black-color);  /* Default text color */
+    text-decoration: none;  /* Remove underline */
+    font-size: 16px;  /* Font size for links */
+    text-transform: uppercase;  /* Uppercase text */
+    padding: 32px;  /* Padding around the links */
+    /* Smooth transition for hover effects */
+    transition: all ease-in-out 0.3s;
+}
+
+/* Active and Hover state for navigation links */
+header nav ul li a.active, header nav ul li a:hover{
+    background: var(--highlight-color);  /* Change background color on hover */
+    color: var(--white-color);  /* Change text color on hover */
+}
+
+/* Logo Styling */
+.logo span{
+    font-size: 36px;  /* Font size for the logo text */
+    color: var(--primary-color);  /* Primary color for the logo text */
+    font-weight: 700;  /* Make the logo text bold */
+    text-transform: uppercase;  /* Uppercase logo text */
+}
+
+/* Logo image styling */
+.logo img{
+    width: 70px;  /* Logo image size */
+    margin: 0 15px;  /* Horizontal spacing around the logo */
+    position: absolute;  /* Absolute position for the image */
+    /* Smooth transition for hover effect */
+    transition: all ease-in-out 0.55s;
+}
+
+/* Hover effect for the logo image */
+.logo img:hover{
+    /* Rotate the logo image on hover */
+    transform: rotate(-80deg);
+}
+
+/* Home Content Styling */
+section{
+    /* Grid layout for the main content */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);  /* Two equal-width columns */
+    align-items: center;  /* Align items vertically */
+    gap: 2rem;  /* Space between grid items */
+    padding: 0 8%;  /* Horizontal padding */
+    height: 100vh;  /* Full viewport height */
+    width: 100%;
+}
+
+/* Heading Styling for home section */
+section h1{
+    font-size: 64px;  /* Large font size */
+    font-weight: 700;  /* Bold font weight */
+    margin-bottom: 20px;  /* Bottom margin for spacing */
+    width: 80%;  /* Limit the width */
+}
+
+/* Paragraph Styling */
+section p{
+    font-size: 18px;  /* Medium font size */
+    line-height: 1.6;  /* Line height for readability */
+    width: 500px;  /* Limit paragraph width */
+    margin-bottom: 30px;  /* Bottom margin for spacing */
+}
+
+/* Button Container Styling */
+section .button-conteiner{
+    /* Flexbox layout for buttons */
+    display: flex;
+    gap: 20px;  /* Horizontal space between buttons */
+}
+
+/* Button Styling */
+section .button-conteiner .btn{
+    background: var(--primary-color);  /* Button background color */
+    color: var(--white-color);  /* Text color */
+    padding: 15px 30px;  /* Button padding */
+    font-size: 18px;  /* Font size for button text */
+    text-transform: uppercase;  /* Uppercase button text */
+    text-decoration: none;  /* Remove text underline */
+    border-radius: 50px;  /* Rounded corners */
+    border: none;  /* Remove border */
+    cursor: pointer;  /* Pointer cursor on hover */
+    /* Smooth transition for hover effect */
+    transition: all ease-in-out 0.22s;
+}
+
+/* Hover effect for buttons */
+section .button-conteiner .btn:hover{
+    /* Button moves up on hover */
+    transform: translateY(-15px);
+}
